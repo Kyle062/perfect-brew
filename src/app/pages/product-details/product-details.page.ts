@@ -18,7 +18,6 @@ export class ProductDetailsPage implements OnInit {
   addToCart(item: any) {
     item.added = true;
 
-   
     setTimeout(() => {
       item.added = false;
     }, 2000);
@@ -28,72 +27,72 @@ export class ProductDetailsPage implements OnInit {
     lover: {
       title: 'LOVER',
       vibe: 'COZY & SWEET',
-      accent: '#D4A373',
-      mainImg: '../../../assets/promotwo.png', // Main big image
+      accent: '#7F6380',
+      mainImg: '../../../assets/promotwo.png',
       items: [
         {
           name: 'Caramel Bliss',
           price: '₱ 150',
-          desc: 'Blonde roast & vanilla.',
-          img: 'assets/lover-1.png',
+          desc: 'Layered espresso with a rich, buttery caramel swirl.',
+          img: '../../../assets/coffeetwo/two1.jpg',
         },
         {
-          name: 'Cloud Foam',
+          name: 'Cloud Foam Matcha',
           price: '₱ 180',
-          desc: 'Sweet layered caramel.',
-          img: 'assets/lover-2.png',
+          desc: 'Premium green tea topped with velvety, sweet cold foam.',
+          img: '../../../assets/coffeetwo/two2.jpg',
         },
         {
-          name: 'Honey Latte',
+          name: 'Sea Salt Matcha',
           price: '₱ 165',
-          desc: 'Smooth floral notes.',
-          img: 'assets/lover-3.png',
+          desc: 'Smooth matcha whisked with a hint of savory sea salt cream.',
+          img: '../../../assets/coffeetwo/two3.jpg',
         },
         {
-          name: 'Berry Whip',
+          name: 'Biscoff Latte',
           price: '₱ 175',
-          desc: 'Strawberry infused cold brew.',
-          img: 'assets/lover-4.png',
+          desc: 'Classic iced latte finished with crunchy Biscoff crumbles.',
+          img: '../../../assets/coffeetwo/two4.jpg',
         },
       ],
     },
     single: {
       title: 'SINGLE',
       vibe: 'BOLD & INDEPENDENT',
-      accent: '#967969',
-      mainImg: 'assets/single-hero.png',
-      items: [
-        {
-          name: 'Midnight',
-          price: '₱ 140',
-          desc: 'Pure black espresso.',
-          img: 'assets/single-1.png',
-        },
-        {
-          name: 'Solo Brew',
-          price: '₱ 160',
-          desc: '18-hour steep cold brew.',
-          img: 'assets/single-2.png',
-        },
-        {
-          name: 'Indie Roast',
-          price: '₱ 155',
-          desc: 'Single-origin nutty notes.',
-          img: 'assets/single-3.png',
-        },
-        {
-          name: 'Lone Mocha',
-          price: '₱ 170',
-          desc: 'Dark chocolate intensity.',
-          img: 'assets/single-4.png',
-        },
-      ],
+      accent: '#7F6380',
+      mainImg: '../../../assets/promoOne.png',
+     items: [
+    {
+      name: 'Midnight Espresso',
+      price: '₱ 140',
+      desc: 'Bold, double-layered espresso with a smooth, milky finish.', 
+      img: '../../../assets/coffeesingle/single1.jpg',
+    },
+    {
+      name: 'Matcha Solo',
+      price: '₱ 160',
+      desc: 'Earthy, 18-hour cold steeped matcha layered over fresh milk.', 
+      img: '../../../assets/coffeesingle/single2.jpg',
+    },
+    {
+      name: 'Indie Roast Cold Brew',
+      price: '₱ 155',
+      desc: 'Intense single-origin cold brew with deep, nutty undertones.', 
+      img: '../../../assets/coffeesingle/single3.jpg',
+    },
+    {
+      name: 'Strawberry Lone Mocha',
+      price: '₱ 170',
+      desc: 'Sweet strawberry fusion blended with dark chocolate intensity.', 
+      img: '../../../assets/coffeesingle/single4.jpg',
+    },
+  ],
     },
     broken: {
       title: 'BROKEN',
       vibe: 'DARK & INTENSE',
-      accent: '#4B3621',
-      mainImg: 'assets/broken-hero.png',
+      accent: '#7F6380',
+      mainImg: '../../../assets/promobroken.png',
       items: [
         {
           name: 'Salted Tear',
@@ -124,7 +123,7 @@ export class ProductDetailsPage implements OnInit {
     family: {
       title: 'W/FAMILY',
       vibe: 'CLASSIC & SHARED',
-      accent: '#8B4513',
+      accent: '#7F6380',
       mainImg: 'assets/family-hero.png',
       items: [
         {

@@ -34,4 +34,62 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+/* ===================================================== */
+/* GLOBAL TAB BAR FIX - SOLVES SCROLLING AND CLICK ISSUES */
+/* ===================================================== */
+
+/* Fix for tab bar clickability and scrolling */
+ion-tabs {
+  ion-tab-bar {
+    --height: 65px;
+    --background: #ffffff;
+    --border: none;
+
+    border-top: 1px solid #f2f2f2;
+    padding-bottom: env(safe-area-inset-bottom);
+
+    /* Critical fixes for clickability */
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    position: relative;
+    contain: layout style;
+  }
+
+  ion-tab-button {
+    --color: #a0a0a0;
+    --color-selected: #1a1a1a;
+    height: 100%;
+    pointer-events: auto !important;
+    cursor: pointer;
+    contain: layout style;
+
+    &.tab-selected ion-icon {
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+
+    ion-icon {
+      font-size: 24px;
+    }
+  }
+}
+
+/* Ensure content scrolls completely above tab bar */
+ion-content::part(scroll) {
+  padding-bottom: 85px !important;
+}
+
+/* Fix for iOS safe area */
+.ios ion-tab-bar {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 5px);
+}
+
+/* Ensure overlays don't block clicks */
+ion-content {
+  --padding-bottom: 85px;
+  --padding-top: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+}

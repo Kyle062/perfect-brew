@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content>
   <div class="home-wrapper">
     <div class="header-section">
       <p class="location-label">LOCATION:</p>
@@ -11,7 +11,7 @@
         class="custom-searchbar"
       ></ion-searchbar>
       <div class="filter-btn-wrapper">
-        <ion-button fill="clear" class="filter-btn">
+        <ion-button fill="clear" class="filter-btn" (click)="openFilter()">
           <ion-icon name="swap-vertical-outline" slot="icon-only"></ion-icon>
         </ion-button>
       </div>
@@ -29,40 +29,57 @@
       <h3>CHOOSE, BUY AND ENJOY</h3>
     </div>
 
-    <ion-card class="category-card" (click)="navigateToProduct('lover')">
-      <img src="assets/promotwo.png" alt="Lover Coffee" />
+    <!-- Current Category Card -->
+    <ion-card
+      class="category-card"
+      (click)="navigateToProduct(currentCategory.id)"
+    >
+      <img
+        [src]="currentCategory.image"
+        [alt]="currentCategory.title + ' Coffee'"
+      />
       <div class="category-overlay">
-        <h2 class="category-title">LOVER</h2>
-        <p class="category-subtext">"Warm hearts, golden coffee."</p>
-        <button class="order-now-btn">Order Now</button>
+        <h2 class="category-title">{{ currentCategory.title }}</h2>
+        <p class="category-subtext">"{{ currentCategory.subtext }}"</p>
+        <button
+          class="order-now-btn"
+          (click)="$event.stopPropagation(); navigateToProduct(currentCategory.id)"
+        >
+          Order Now
+        </button>
       </div>
     </ion-card>
 
-    <ion-card class="category-card" (click)="navigateToProduct('single')">
-      <img src="assets/promoOne.png" alt="Single Coffee" />
-      <div class="category-overlay">
-        <h2 class="category-title">SINGLE</h2>
-        <p class="category-subtext">"Coffee is my only date."</p>
-        <button class="order-now-btn">Order Now</button>
-      </div>
-    </ion-card>
+    <!-- Navigation Controls -->
+    <div class="navigation-controls">
+      <ion-button
+        fill="clear"
+        class="nav-btn"
+        (click)="previousCard()"
+        [disabled]="currentIndex === 0"
+      >
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        <span>Prev</span>
+      </ion-button>
 
-    <ion-card class="category-card" (click)="navigateToProduct('broken')">
-      <img src="assets/promobroken.png" alt="Broken Coffee" />
-      <div class="category-overlay">
-        <h2 class="category-title">BROKEN</h2>
-        <p class="category-subtext">"Broken hearts, golden coffee."</p>
-        <button class="order-now-btn">Order Now</button>
+      <div class="page-indicator">
+        <span
+          *ngFor="let cat of categories; let i = index"
+          [class.active]="i === currentIndex"
+          (click)="goToCard(i)"
+        >
+        </span>
       </div>
-    </ion-card>
 
-    <ion-card class="category-card cdlast1" (click)="navigateToProduct('family')">
-      <img src="assets/promofamily.png" alt="Family Coffee" />
-      <div class="category-overlay">
-        <h2 class="category-title">FAMILY</h2>
-        <p class="category-subtext">"Home is where coffee brews."</p>
-        <button class="order-now-btn">Order Now</button>
-      </div>
-    </ion-card>
+      <ion-button
+        fill="clear"
+        class="nav-btn"
+        (click)="nextCard()"
+        [disabled]="currentIndex === categories.length - 1"
+      >
+        <span>Next</span>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
   </div>
 </ion-content>

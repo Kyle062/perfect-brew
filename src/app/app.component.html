@@ -1,3 +1,45 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+
+  <div class="custom-bottom-nav" *ngIf="showNavbar()">
+    <div
+      class="nav-item"
+      [class.active]="currentRoute.includes('tab1')"
+      (click)="navigateTo('tab1')"
+    >
+      <ion-icon name="home"></ion-icon>
+    </div>
+
+    <div
+      class="nav-item"
+      [class.active]="currentRoute.includes('tab2')"
+      (click)="navigateTo('tab2')"
+    >
+      <ion-icon name="grid-outline"></ion-icon>
+    </div>
+
+    <div
+      class="nav-item"
+      [class.active]="currentRoute.includes('tab3')"
+      (click)="navigateTo('tab3')"
+    >
+      <ion-icon name="person-outline"></ion-icon>
+    </div>
+
+    <div
+      class="nav-item"
+      [class.active]="currentRoute.includes('tab4')"
+      (click)="navigateTo('tab4')"
+    >
+      <ion-icon name="call-outline"></ion-icon>
+    </div>
+
+    <div
+      class="nav-item"
+      [class.active]="currentRoute.includes('tab5')"
+      (click)="navigateTo('tab5')"
+    >
+      <ion-icon name="people-outline"></ion-icon>
+    </div>
+  </div>
 </ion-app>

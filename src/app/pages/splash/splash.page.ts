@@ -1,36 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-// 1. Import all standard modules needed from Ionic
-import {
-  IonContent,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-  IonButton,
-} from '@ionic/angular/standalone';
-// 2. We will need routerLink to navigate to the tabs later
-import { RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router'; // <--- MUST ADD THIS
+import { IonContent, IonButton } from '@ionic/angular/standalone'; // <--- ADD IonButton
 
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.page.html',
   styleUrls: ['./splash.page.scss'],
   standalone: true,
-  // 3. Add those imports here
   imports: [
     IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
+    IonButton, // <--- ADD THIS
     CommonModule,
     FormsModule,
-    IonButton,
-    RouterLink,
+    RouterLink, // <--- ADD THIS
   ],
 })
-export class SplashPage implements OnInit {
+export class SplashPage {
   constructor() {}
-
-  ngOnInit() {}
 }

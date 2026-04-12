@@ -1,5 +1,6 @@
 :host {
   --ion-background-color: #ffffff;
+  --image-height: 450px;
 }
 
 .splash-container {
@@ -11,10 +12,10 @@
 
 .header-image-wrapper {
   width: 100%;
-  height: 290px;
-  flex-shrink: 0;
+  height: var(--image-height);
   overflow: hidden;
   border-radius: 0 0 24px 24px;
+
   .image-placeholder {
     object-fit: cover;
     width: 100%;
@@ -32,49 +33,48 @@
 }
 
 .content-body {
-  flex: 1;
-  padding: 3.5rem 2rem 4rem;
+  flex-grow: 1;
+  padding: 2rem 2rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
-  overflow-y: auto;
 }
 
 .main-heading {
   font-family: "Notable", sans-serif;
-  font-weight: 400;
+  font-weight: 900;
   color: #000000;
   text-transform: uppercase;
-  font-size: 2.7rem;
-  line-height: 1.1;
+  font-size: 2.2rem;
+  line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 2.2rem;
-  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
 }
 
 .welcome-text {
   font-family: "Inter", sans-serif;
   color: #333333;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 4.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .get-started-btn {
-  font-family: "Notable", sans-serif;
-  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   --background: #1e1307;
   --color: #ffffff;
   --border-radius: 30px;
-  --padding-top: 1.5rem;
-  --padding-bottom: 1.5rem;
+  --padding-top: 1.2rem;
+  --padding-bottom: 1.2rem;
   margin: 0;
-  margin-bottom: 20px;
+  width: 80%;
+  align-self: center;
 }

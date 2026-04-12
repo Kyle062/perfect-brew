@@ -1,11 +1,25 @@
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home" href="/tabs/home">
-      <ion-icon name="home-outline">ss</ion-icon>
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tab-bar slot="bottom" class="brand-tab-bar">
+    <ion-tab-button tab="home" href="/tabs/tab1">
+      <ion-icon name="home"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="products" href="/tabs/products">
-      <ion-icon name="grid-outline">ss</ion-icon>
+    <ion-tab-button tab="products" href="/tabs/tab2">
+      <ion-icon name="grid-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="contact">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="community">
+      <ion-icon name="people-outline"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

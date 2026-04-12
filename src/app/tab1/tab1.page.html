@@ -1,13 +1,68 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>tab1</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tab1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="home-wrapper">
+    <div class="header-section">
+      <p class="location-label">LOCATION:</p>
+      <p class="address-text">Compostela, Davao de Oro, Philippines</p>
+    </div>
+
+    <div class="search-container">
+      <ion-searchbar
+        placeholder="Search Coffee"
+        class="custom-searchbar"
+      ></ion-searchbar>
+      <div class="filter-btn-wrapper">
+        <ion-button fill="clear" class="filter-btn">
+          <ion-icon name="swap-vertical-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+
+    <ion-card class="promo-card">
+      <img src="assets/promocoffee.png" alt="Promo Coffee" />
+      <div class="promo-overlay">
+        <div class="promo-badge">PROMO</div>
+        <h2 class="promo-title">BUY ONE<br />AND GET<br />ONE FREE</h2>
+      </div>
+    </ion-card>
+
+    <div class="section-heading">
+      <h3>CHOOSE, BUY AND ENJOY</h3>
+    </div>
+
+    <ion-card class="category-card" (click)="navigateToProduct('lover')">
+      <img src="assets/promotwo.png" alt="Lover Coffee" />
+      <div class="category-overlay">
+        <h2 class="category-title">LOVER</h2>
+        <p class="category-subtext">"Warm hearts, golden coffee."</p>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+    </ion-card>
+
+    <ion-card class="category-card" (click)="navigateToProduct('single')">
+      <img src="assets/promoOne.png" alt="Single Coffee" />
+      <div class="category-overlay">
+        <h2 class="category-title">SINGLE</h2>
+        <p class="category-subtext">"Coffee is my only date."</p>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+    </ion-card>
+
+    <ion-card class="category-card" (click)="navigateToProduct('broken')">
+      <img src="assets/promobroken.png" alt="Broken Coffee" />
+      <div class="category-overlay">
+        <h2 class="category-title">BROKEN</h2>
+        <p class="category-subtext">"Broken hearts, golden coffee."</p>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+    </ion-card>
+
+    <ion-card class="category-card cdlast1" (click)="navigateToProduct('family')">
+      <img src="assets/promofamily.png" alt="Family Coffee" />
+      <div class="category-overlay">
+        <h2 class="category-title">FAMILY</h2>
+        <p class="category-subtext">"Home is where coffee brews."</p>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+    </ion-card>
+  </div>
 </ion-content>

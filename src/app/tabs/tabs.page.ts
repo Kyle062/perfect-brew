@@ -4,13 +4,15 @@ import {
   IonTabBar,
   IonTabButton,
   IonIcon,
+  IonRouterOutlet,
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
-  homeOutline,
+  home,
   gridOutline,
   personOutline,
-  cartOutline,
+  callOutline,
+  peopleOutline,
 } from 'ionicons/icons';
 
 @Component({
@@ -18,10 +20,10 @@ import {
   templateUrl: './tabs.page.html',
   styleUrls: ['./tabs.page.scss'],
   standalone: true,
-  imports: [IonTabs, IonTabBar, IonTabButton, IonIcon],
+  imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonRouterOutlet],
 })
 export class TabsPage {
   constructor() {
-    addIcons({ homeOutline, gridOutline, personOutline, cartOutline });
+    addIcons({ home, gridOutline, personOutline, callOutline, peopleOutline });
   }
 }

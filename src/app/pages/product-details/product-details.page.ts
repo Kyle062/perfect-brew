@@ -61,32 +61,32 @@ export class ProductDetailsPage implements OnInit {
       vibe: 'BOLD & INDEPENDENT',
       accent: '#7F6380',
       mainImg: '../../../assets/promoOne.png',
-     items: [
-    {
-      name: 'Midnight Espresso',
-      price: '₱ 140',
-      desc: 'Bold, double-layered espresso with a smooth, milky finish.', 
-      img: '../../../assets/coffeesingle/single1.jpg',
-    },
-    {
-      name: 'Matcha Solo',
-      price: '₱ 160',
-      desc: 'Earthy, 18-hour cold steeped matcha layered over fresh milk.', 
-      img: '../../../assets/coffeesingle/single2.jpg',
-    },
-    {
-      name: 'Indie Roast Cold Brew',
-      price: '₱ 155',
-      desc: 'Intense single-origin cold brew with deep, nutty undertones.', 
-      img: '../../../assets/coffeesingle/single3.jpg',
-    },
-    {
-      name: 'Strawberry Lone Mocha',
-      price: '₱ 170',
-      desc: 'Sweet strawberry fusion blended with dark chocolate intensity.', 
-      img: '../../../assets/coffeesingle/single4.jpg',
-    },
-  ],
+      items: [
+        {
+          name: 'Midnight Espresso',
+          price: '₱ 140',
+          desc: 'Bold, double-layered espresso with a smooth, milky finish.',
+          img: '../../../assets/coffeesingle/single1.jpg',
+        },
+        {
+          name: 'Matcha Solo',
+          price: '₱ 160',
+          desc: 'Earthy, 18-hour cold steeped matcha layered over fresh milk.',
+          img: '../../../assets/coffeesingle/single2.jpg',
+        },
+        {
+          name: 'Indie Roast Cold Brew',
+          price: '₱ 155',
+          desc: 'Intense single-origin cold brew with deep, nutty undertones.',
+          img: '../../../assets/coffeesingle/single3.jpg',
+        },
+        {
+          name: 'Strawberry Lone Mocha',
+          price: '₱ 170',
+          desc: 'Sweet strawberry fusion blended with dark chocolate intensity.',
+          img: '../../../assets/coffeesingle/single4.jpg',
+        },
+      ],
     },
     broken: {
       title: 'BROKEN',
@@ -95,28 +95,28 @@ export class ProductDetailsPage implements OnInit {
       mainImg: '../../../assets/promobroken.png',
       items: [
         {
-          name: 'Salted Tear',
+          name: 'Salted Tear Latte',
           price: '₱ 170',
-          desc: 'Cocoa with sea salt.',
-          img: 'assets/broken-1.png',
+          desc: 'Deep cocoa infused with sea salt, labeled with a reminder of grace.',
+          img: '../../../assets/coffeebroken/broken1.jpg',
         },
         {
           name: 'Bitter Truth',
           price: '₱ 190',
-          desc: 'Double-shot ristretto.',
-          img: 'assets/broken-2.png',
+          desc: 'A double-shot ristretto for those who trust the process.',
+          img: '../../../assets/coffeebroken/broken2.jpg',
         },
         {
-          name: 'Dark Hour',
+          name: 'Dark Hour Matcha',
           price: '₱ 185',
-          desc: 'Charcoal-roasted beans.',
-          img: 'assets/broken-3.png',
+          desc: 'Intense charcoal-infused matcha for the longest nights.',
+          img: '../../../assets/coffeebroken/broken3.jpg',
         },
         {
           name: 'Mended Cup',
           price: '₱ 195',
-          desc: 'Extra cream for the soul.',
-          img: 'assets/broken-4.png',
+          desc: 'Extra cream and a smooth finish to heal the soul.',
+          img: '../../../assets/coffeebroken/broken4.jpg',
         },
       ],
     },
@@ -124,7 +124,7 @@ export class ProductDetailsPage implements OnInit {
       title: 'W/FAMILY',
       vibe: 'CLASSIC & SHARED',
       accent: '#7F6380',
-      mainImg: 'assets/family-hero.png',
+      mainImg: '../../../assets/promofamily.png',
       items: [
         {
           name: 'Heritage',

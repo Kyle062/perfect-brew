@@ -2,19 +2,19 @@
   --ion-background-color: #ffffff;
   display: block;
   height: 100vh;
-  overflow: hidden; /* Prevent any overflow on host */
+  overflow: hidden; 
 }
 
 ion-content {
   --background: #ffffff;
-  --overflow: hidden; /* Disable scrolling in ion-content */
-  overflow: hidden; /* Fallback */
+  --overflow: hidden; 
+  overflow: hidden; 
   position: relative;
   height: 100%;
 }
 
 ion-content::part(scroll) {
-  overflow: hidden !important; /* Force disable scroll on shadow DOM */
+  overflow: hidden !important; 
   position: relative;
   height: 100%;
 }

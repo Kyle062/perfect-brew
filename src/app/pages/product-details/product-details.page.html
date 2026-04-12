@@ -1,13 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>product-details</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" *ngIf="currentProduct">
+  <div class="header-nav">
+    <ion-button fill="clear" routerLink="/tab1">
+      <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear">
+      <ion-icon name="cart-outline" color="dark"></ion-icon>
+    </ion-button>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">product-details</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="hero-section">
+    <img
+      [src]="currentProduct.mainImg"
+      class="main-hero-img"
+      alt="Category Hero"
+    />
+
+    <div class="title-block">
+      <span class="vibe-tag">{{ currentProduct.vibe }}</span>
+      <h1 [style.color]="currentProduct.accent">{{ currentProduct.title }}</h1>
+    </div>
+  </div>
+
+  <div class="product-grid">
+    <div class="grid-card" *ngFor="let item of currentProduct.items">
+      <img [src]="item.img" class="item-img" [alt]="item.name" />
+
+      <div class="info-box" [style.background]="currentProduct.accent">
+        <div class="price-header">
+          <span class="price-tag">{{ item.price }}</span>
+        </div>
+        <p class="description">{{ item.desc }}</p>
+        <button
+          class="add-btn"
+          [class.is-added]="item.added"
+          (click)="addToCart(item)"
+        >
+          {{ item.added ? 'ADDED!' : 'ADD TO CART' }}
+        </button>
+      </div>
+    </div>
+  </div>
 </ion-content>

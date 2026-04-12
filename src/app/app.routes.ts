@@ -8,7 +8,8 @@ export const routes: Routes = [
   },
   {
     path: 'splash',
-    loadComponent: () => import('./pages/splash/splash.page').then((m) => m.SplashPage),
+    loadComponent: () =>
+      import('./pages/splash/splash.page').then((m) => m.SplashPage),
   },
   {
     path: 'tab1',
@@ -29,5 +30,12 @@ export const routes: Routes = [
   {
     path: 'tab5',
     loadComponent: () => import('./tab5/tab5.page').then((m) => m.Tab5Page),
+  },
+  {
+    path: 'product-details/:id', 
+    loadComponent: () =>
+      import('./pages/product-details/product-details.page').then(
+        (m) => m.ProductDetailsPage,
+      ),
   },
 ];

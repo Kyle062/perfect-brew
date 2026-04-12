@@ -53,7 +53,7 @@ export class Tab1Page {
     {
       id: 'broken',
       title: 'BROKEN',
-      subtext: 'Broken hearts, golden coffee.',
+      subtext: 'Bitter dregs, broken dreams.',
       image: 'assets/promobroken.png',
     },
     {

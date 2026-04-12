@@ -44,6 +44,10 @@ export class AppComponent {
     // This must match the 'path' names in your routes file
     return this.currentRoute !== '/' && this.currentRoute !== '/splash';
   }
+  showNavbar2(): boolean {
+    // This must match the 'path' names in your routes file
+    return this.currentRoute !== '/' && this.currentRoute !== '/product-details/:id';
+  }
 
   // Navigation logic for custom buttons
   navigateTo(path: string) {

@@ -38,4 +38,8 @@ export const routes: Routes = [
         (m) => m.ProductDetailsPage,
       ),
   },
+  {
+    path: 'invite',
+    loadComponent: () => import('./invite/invite.page').then( m => m.InvitePage)
+  },
 ];

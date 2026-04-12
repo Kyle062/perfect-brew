@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <div class="header-nav">
+    <ion-button fill="clear" (click)="goBack()" class="small-back-btn">
+      <ion-icon name="chevron-back"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="invite-container">
+    <h1 class="page-title">Invite Friends</h1>
+
+    <div class="code-wrapper">
+      <div class="code-box">
+        <span class="invite-code">192743655</span>
+      </div>
+
+      <ion-button class="copy" (click)="copyCode()">
+        {{ isCopied ? 'COPIED!' : 'COPY CODE' }}
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

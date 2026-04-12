@@ -1,0 +1,7 @@
+{
+  "name": "perfect-brew",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

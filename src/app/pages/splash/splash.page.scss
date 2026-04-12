@@ -1,0 +1,81 @@
+:host {
+  --ion-background-color: #ffffff;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.header-image-wrapper {
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0 0 24px 24px;
+
+  .image-placeholder {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    rect {
+      fill: #cfc5be !important;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.content-body {
+  flex: 1;
+  padding: 3.5rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.main-heading {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 2.2rem;
+  letter-spacing: 2px;
+}
+
+.welcome-text {
+  font-family: "Inter", sans-serif;
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 4.5rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.get-started-btn {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  --background: #1e1307;
+  --color: #ffffff;
+  --border-radius: 30px;
+  --padding-top: 1.5rem;
+  --padding-bottom: 1.5rem;
+  margin: 0;
+  margin-bottom: 20px;
+}

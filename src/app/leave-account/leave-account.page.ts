@@ -49,7 +49,7 @@ export class LeaveAccountPage {
   }
 
   cancel() {
-    this.router.navigate(['/tabs/tab3']);
+    this.router.navigate(['/tab3']);
   }
 
   async confirmLeave() {
@@ -95,7 +95,7 @@ export class LeaveAccountPage {
           text: 'OK',
           handler: () => {
             // Navigate to login or splash page
-            this.router.navigate(['/login']); // Change this to your actual login route
+            this.router.navigate(['/splash']); // Change this to your actual login route
           },
         },
       ],

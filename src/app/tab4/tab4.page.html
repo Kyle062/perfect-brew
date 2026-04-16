@@ -1,13 +1,164 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>tab4</ion-title>
+    <ion-title>Contact Us</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">tab4</ion-title>
+      <ion-title size="large">Contact Us</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="contact-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="coffee-icon">
+        <ion-icon name="cafe-outline"></ion-icon>
+      </div>
+      <h1>FEYA Coffee</h1>
+      <p>Your favorite coffee spot in Davao de Oro</p>
+    </div>
+
+    <!-- Contact Information Cards -->
+    <div class="contact-info-section">
+      <!-- Email -->
+      <div
+        class="info-card"
+        (click)="showAlert('Email', 'feyacoffee@gmail.com')"
+      >
+        <div class="icon-wrapper email-bg">
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+        <div class="info-content">
+          <h3>Email</h3>
+          <p>feyacoffee@gmail.com</p>
+        </div>
+        <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+      </div>
+
+      <!-- Phone -->
+      <div
+        class="info-card"
+        (click)="showAlert('Contact Number', '0912-345-6789')"
+      >
+        <div class="icon-wrapper phone-bg">
+          <ion-icon name="call-outline"></ion-icon>
+        </div>
+        <div class="info-content">
+          <h3>Contact Number</h3>
+          <p>0912-345-6789</p>
+        </div>
+        <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+      </div>
+
+      <!-- Address -->
+      <div
+        class="info-card"
+        (click)="showAlert('Address', 'Compostela, Davao de Oro, Philippines')"
+      >
+        <div class="icon-wrapper address-bg">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
+        <div class="info-content">
+          <h3>Address</h3>
+          <p>Compostela, Davao de Oro, Philippines</p>
+        </div>
+        <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+      </div>
+
+      <!-- Facebook -->
+      <div
+        class="info-card"
+        (click)="showAlert('Facebook Page', 'FEYA Coffee')"
+      >
+        <div class="icon-wrapper facebook-bg">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </div>
+        <div class="info-content">
+          <h3>Facebook Page</h3>
+          <p>FEYA Coffee</p>
+        </div>
+        <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+      </div>
+
+      <!-- Instagram -->
+      <div class="info-card" (click)="showAlert('Instagram', '@feyacoffee')">
+        <div class="icon-wrapper instagram-bg">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        <div class="info-content">
+          <h3>Instagram</h3>
+          <p>@feyacoffee</p>
+        </div>
+        <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+      </div>
+    </div>
+
+    <!-- Store Locations Section -->
+    <div class="locations-section">
+      <div class="section-header">
+        <ion-icon name="storefront-outline"></ion-icon>
+        <h2>Our Physical Stores</h2>
+      </div>
+      <div class="location-cards">
+        <div
+          class="location-card"
+          (click)="showAlert('New Bataan Store', 'New Bataan, Davao de Oro')"
+        >
+          <ion-icon name="pin-outline"></ion-icon>
+          <div class="location-details">
+            <h4>New Bataan</h4>
+            <p>New Bataan, Davao de Oro</p>
+          </div>
+        </div>
+        <div
+          class="location-card"
+          (click)="showAlert('Compostela Store', 'Compostela, Davao de Oro')"
+        >
+          <ion-icon name="pin-outline"></ion-icon>
+          <div class="location-details">
+            <h4>Compostela</h4>
+            <p>Compostela, Davao de Oro</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Business Hours Section -->
+    <div class="hours-section">
+      <div class="section-header">
+        <ion-icon name="time-outline"></ion-icon>
+        <h2>Business Hours</h2>
+      </div>
+      <div class="hours-card">
+        <div class="hour-item">
+          <span>Monday - Friday</span>
+          <strong>7:00 AM - 8:00 PM</strong>
+        </div>
+        <div class="hour-item">
+          <span>Saturday - Sunday</span>
+          <strong>8:00 AM - 9:00 PM</strong>
+        </div>
+        <div class="hour-item holiday">
+          <span>Holidays</span>
+          <strong>9:00 AM - 6:00 PM</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Preview -->
+    <div
+      class="map-section"
+      (click)="showAlert('Location Map', 'Compostela, Davao de Oro, Philippines')"
+    >
+      <div class="map-preview">
+        <div class="map-placeholder">
+          <ion-icon name="map-outline"></ion-icon>
+          <p>View on Map</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

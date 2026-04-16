@@ -10,13 +10,13 @@ import {
   IonButton,
 } from '@ionic/angular/standalone';
 
-// 1. Import the specific icons here
 import { addIcons } from 'ionicons';
 import {
   settingsOutline,
   personAddOutline,
   logOutOutline,
   chevronForwardOutline,
+  pencilOutline,
 } from 'ionicons/icons';
 
 @Component({
@@ -36,16 +36,24 @@ import {
 })
 export class Tab3Page {
   constructor(private router: Router) {
-   
     addIcons({
       settingsOutline,
       personAddOutline,
       logOutOutline,
       chevronForwardOutline,
+      pencilOutline,
     });
   }
 
   goToInvite() {
     this.router.navigate(['/invite']);
+  }
+
+  goToSettings() {
+    this.router.navigate(['/settings']);
+  }
+
+  goToLeaveAccount() {
+    this.router.navigate(['/leave-account']);
   }
 }

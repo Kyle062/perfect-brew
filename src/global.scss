@@ -93,3 +93,31 @@ ion-content {
   --padding-start: 0;
   --padding-end: 0;
 }
+:root {
+  --ion-background-color: #ffffff;
+  --ion-background-color-rgb: 255, 255, 255;
+  --ion-toolbar-background: #ffffff;
+  --ion-tab-bar-background: #ffffff;
+  --ion-card-background: #ffffff;
+  --ion-item-background: #ffffff;
+}
+
+body,
+ion-app,
+ion-content,
+ion-page {
+  background: #ffffff;
+}
+
+ion-content {
+  --background: #ffffff;
+  --color: #1a1a1a;
+}
+
+ion-list {
+  background: #ffffff;
+}
+
+ion-item {
+  --background: #ffffff;
+}

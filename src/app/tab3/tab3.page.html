@@ -1,11 +1,14 @@
 <ion-content [fullscreen]="true">
-  <div class="profile-container">
+  <div class="profile-wrapper">
     <div class="header-section">
       <div class="avatar-wrapper">
         <img
-          src="https://ui-avatars.com/api/?name=Visitor&background=7F6380&color=fff"
-          alt="User"
+          src="https://ui-avatars.com/api/?name=Visitor&background=7F6380&color=fff&bold=true&size=120&fontsize=0.60"
+          alt="User Avatar"
         />
+        <div class="avatar-badge">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </div>
       </div>
       <h2 class="username">VISITORS</h2>
       <p class="role">GUEST ACCOUNT</p>
@@ -13,43 +16,24 @@
 
     <div class="menu-section">
       <ion-list lines="none">
-        <ion-item button detail="false">
-          <ion-icon name="settings-outline" slot="start"></ion-icon>
+        <ion-item button (click)="goToSettings()" class="menu-item">
+          <ion-icon name="settings-outline" slot="start" class="menu-icon"></ion-icon>
           <ion-label>Settings</ion-label>
-          <ion-icon
-            name="chevron-forward-outline"
-            slot="end"
-            class="chevron"
-          ></ion-icon>
+          <ion-icon name="chevron-forward-outline" slot="end" class="chevron-icon"></ion-icon>
         </ion-item>
 
-        <ion-item button detail="false" (click)="goToInvite()">
-          <ion-icon name="person-add-outline" slot="start"></ion-icon>
+        <ion-item button (click)="goToInvite()" class="menu-item">
+          <ion-icon name="person-add-outline" slot="start" class="menu-icon"></ion-icon>
           <ion-label>Invite People</ion-label>
-          <ion-icon
-            name="chevron-forward-outline"
-            slot="end"
-            class="chevron"
-          ></ion-icon>
+          <ion-icon name="chevron-forward-outline" slot="end" class="chevron-icon"></ion-icon>
         </ion-item>
 
-        <ion-item button detail="false">
-          <ion-icon name="log-out-outline" slot="start"></ion-icon>
-          <ion-label>Leave</ion-label>
-          <ion-icon
-            name="chevron-forward-outline"
-            slot="end"
-            class="chevron"
-          ></ion-icon>
+        <ion-item button (click)="goToLeaveAccount()" class="menu-item leave-item">
+          <ion-icon name="log-out-outline" slot="start" class="menu-icon"></ion-icon>
+          <ion-label>Leave Account</ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end" class="chevron-icon"></ion-icon>
         </ion-item>
       </ion-list>
-    </div>
-
-    <div class="footer-section">
-      <ion-button fill="clear" color="dark" class="leave-btn">
-        <ion-icon name="log-out-outline" slot="start"></ion-icon>
-        Leave
-      </ion-button>
     </div>
   </div>
 </ion-content>

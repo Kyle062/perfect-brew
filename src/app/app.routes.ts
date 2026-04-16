@@ -42,4 +42,12 @@ export const routes: Routes = [
     path: 'invite',
     loadComponent: () => import('./invite/invite.page').then( m => m.InvitePage)
   },
+  {
+    path: 'settings',
+    loadComponent: () => import('./settings/settings.page').then( m => m.SettingsPage)
+  },
+  {
+    path: 'leave-account',
+    loadComponent: () => import('./leave-account/leave-account.page').then( m => m.LeaveAccountPage)
+  },
 ];

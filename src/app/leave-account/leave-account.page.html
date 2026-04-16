@@ -1,13 +1,42 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>leave-account</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Leave Account</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">leave-account</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="leave-container">
+    <div class="warning-icon">
+      <ion-icon name="warning-outline"></ion-icon>
+    </div>
+
+    <h1>Leave Account?</h1>
+
+    <p class="warning-message">
+      Are you sure you want to leave this account? You will lose access to all
+      your data and settings.
+    </p>
+
+    <div class="info-box">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <p>This action cannot be undone.</p>
+    </div>
+
+    <div class="button-group">
+      <ion-button fill="outline" (click)="cancel()" class="cancel-btn">
+        Cancel
+      </ion-button>
+      <ion-button
+        fill="solid"
+        (click)="confirmLeave()"
+        class="confirm-leave-btn"
+      >
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        Yes, Leave Account
+      </ion-button>
+    </div>
+  </div>
 </ion-content>

@@ -50,4 +50,8 @@ export const routes: Routes = [
     path: 'leave-account',
     loadComponent: () => import('./leave-account/leave-account.page').then( m => m.LeaveAccountPage)
   },
+  {
+    path: 'edit-profile',
+    loadComponent: () => import('./edit-profile/edit-profile.page').then( m => m.EditProfilePage)
+  },
 ];

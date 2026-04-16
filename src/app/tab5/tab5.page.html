@@ -1,13 +1,141 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>tab5</ion-title>
+    <ion-title>About Us</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">tab5</ion-title>
+      <ion-title size="large">About Us</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="about-wrapper">
+    <!-- Hero Section -->
+    <div
+      class="hero-section"
+      (click)="showAlert('FEYA Coffee', 'Your Daily Coffee Companion ☕')"
+    >
+      <div class="coffee-logo">
+        <ion-icon name="cafe-outline"></ion-icon>
+      </div>
+      <h1>FEYA Coffee</h1>
+      <p class="tagline">Your Daily Coffee Companion</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-section">
+      <!-- Introduction -->
+      <div
+        class="card fade-in"
+        (click)="showAlert('Modern Mobile Application', 'FEYA Coffee makes ordering your favorite coffee drinks and snacks easier, faster, and more enjoyable!')"
+      >
+        <div class="card-icon">
+          <ion-icon name="phone-portrait-outline"></ion-icon>
+        </div>
+        <h2>Modern Mobile Application</h2>
+        <p>
+          FEYA Coffee is a modern mobile application created for coffee lovers
+          who value convenience, quality, and a seamless digital experience. Our
+          app is designed to make ordering your favorite coffee drinks and
+          snacks easier, faster, and more enjoyable—all from the comfort of your
+          mobile device.
+        </p>
+      </div>
+
+      <!-- Mission & Belief -->
+      <div
+        class="card fade-in"
+        (click)="showAlert('Our Belief', 'Every cup of coffee should bring comfort and satisfaction ☕')"
+      >
+        <div class="card-icon">
+          <ion-icon name="heart-outline"></ion-icon>
+        </div>
+        <h2>Our Belief</h2>
+        <p>
+          At FEYA Coffee, we believe that every cup of coffee should bring
+          comfort and satisfaction. That's why we provide a user-friendly
+          platform where customers can explore a variety of beverages, customize
+          their orders, and track them in real time. Whether you prefer hot
+          coffee, iced drinks, or light snacks, FEYA Coffee is here to serve
+          your cravings anytime, anywhere.
+        </p>
+      </div>
+
+      <!-- Mission Statement -->
+      <div
+        class="card mission-card fade-in"
+        (click)="showAlert('Our Mission', 'Enhancing coffee experience by combining great taste with smart technology 🚀')"
+      >
+        <div class="card-icon">
+          <ion-icon name="rocket-outline"></ion-icon>
+        </div>
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to enhance the coffee experience by combining great
+          taste with smart technology. We aim to support local coffee culture
+          while embracing innovation that improves customer service and
+          efficiency.
+        </p>
+      </div>
+
+      <!-- Closing Statement -->
+      <div
+        class="closing-card fade-in"
+        (click)="showAlert('FEYA Coffee', 'More than just an app—it\'s your daily coffee companion! ⭐')"
+      >
+        <ion-icon name="star-outline" class="star-icon"></ion-icon>
+        <p class="closing-text">
+          FEYA Coffee is more than just an app—it's your daily coffee companion.
+        </p>
+        <div class="coffee-beans">
+          <span>☕</span>
+          <span>☕</span>
+          <span>☕</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+      <h3>Why Choose FEYA Coffee?</h3>
+      <div class="features-grid">
+        <div
+          class="feature-item"
+          (click)="showAlert('Fast & Easy', 'Quick and seamless ordering experience ⚡')"
+        >
+          <ion-icon name="flash-outline"></ion-icon>
+          <span>Fast & Easy</span>
+        </div>
+        <div
+          class="feature-item"
+          (click)="showAlert('Custom Orders', 'Personalize your coffee just the way you like it 🎨')"
+        >
+          <ion-icon name="cube-outline"></ion-icon>
+          <span>Custom Orders</span>
+        </div>
+        <div
+          class="feature-item"
+          (click)="showAlert('Real-time Tracking', 'Track your order from preparation to delivery 📍')"
+        >
+          <ion-icon name="locate-outline"></ion-icon>
+          <span>Real-time Tracking</span>
+        </div>
+        <div
+          class="feature-item"
+          (click)="showAlert('Exclusive Offers', 'Get special discounts and promotions 🎁')"
+        >
+          <ion-icon name="gift-outline"></ion-icon>
+          <span>Exclusive Offers</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Version Footer -->
+    <div class="version-footer">
+      <p>Version 1.0.0</p>
+      <p>© 2024 FEYA Coffee. All rights reserved.</p>
+    </div>
+  </div>
 </ion-content>

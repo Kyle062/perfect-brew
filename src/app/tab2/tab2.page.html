@@ -1,7 +1,6 @@
 <ion-content [fullscreen]="true">
   <div class="header">
     <h1>All Products</h1>
- 
   </div>
 
   <div class="product-grid">
@@ -13,13 +12,6 @@
       <div class="info-block">
         <span class="category-tag">{{ prod.categoryTitle }}</span>
         <h3 class="product-name">{{ prod.itemName }}</h3>
-        <button
-          class="add-btn"
-          [class.is-added]="prod.added"
-          (click)="addToCart(prod)"
-        >
-          {{ prod.added ? 'ADDED TO CART' : 'ADD TO CART' }}
-        </button>
       </div>
     </div>
   </div>

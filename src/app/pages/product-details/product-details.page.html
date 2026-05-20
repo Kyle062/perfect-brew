@@ -31,15 +31,7 @@
           <span class="price-tag">{{ item.price }}</span>
         </div>
         <p class="description">{{ item.desc }}</p>
-        <button
-          class="add-btn"
-          [class.is-added]="item.added"
-          (click)="addToCart(item)"
-        >
-          {{ item.added ? 'ADDED!' : 'ADD TO CART' }}
-        </button>
       </div>
     </div>
   </div>
 </ion-content>
-

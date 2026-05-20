@@ -5,7 +5,6 @@ import { addIcons } from 'ionicons';
 import {
   chevronBackOutline,
   chevronForwardOutline,
-  cartOutline,
 } from 'ionicons/icons';
 
 @Component({
@@ -125,7 +124,7 @@ export class Tab2Page implements OnInit {
   };
 
   constructor() {
-    addIcons({ chevronBackOutline, chevronForwardOutline, cartOutline });
+    addIcons({ chevronBackOutline, chevronForwardOutline });
   }
 
   ngOnInit() {
@@ -143,7 +142,6 @@ export class Tab2Page implements OnInit {
           itemName: item.name,
           itemPrice: item.price,
           img: item.img,
-          added: false,
         });
       });
     });
@@ -153,13 +151,6 @@ export class Tab2Page implements OnInit {
     const start = this.currentPage * this.itemsPerPage;
     const end = start + this.itemsPerPage;
     this.paginatedProducts = this.allProducts.slice(start, end);
-  }
-
-  addToCart(item: any) {
-    item.added = true;
-    setTimeout(() => {
-      item.added = false;
-    }, 2000);
   }
 
   nextPage() {

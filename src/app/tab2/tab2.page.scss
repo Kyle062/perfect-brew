@@ -13,7 +13,6 @@ ion-content {
     margin: 0;
     color: #7f6380;
   }
- 
 }
 
 .product-grid {
@@ -43,6 +42,7 @@ ion-content {
         bottom: 10px;
         right: 10px;
         background: #7f6380;
+        color: white;
         padding: 4px 8px;
         border-radius: 6px;
         font-size: 0.65rem;
@@ -52,7 +52,7 @@ ion-content {
     }
 
     .info-block {
-      padding: 15px 12px;
+      padding: 15px 12px 20px;
       display: flex;
       flex-direction: column;
 
@@ -67,28 +67,11 @@ ion-content {
       .product-name {
         font-size: 0.8rem;
         font-weight: 700;
-        margin: 4px 0 12px;
+        margin: 4px 0 0;
         color: #1a1a1a;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      }
-
-      .add-btn {
-        background: #000;
-        color: white;
-        border: none;
-        padding: 8px;
-        border-radius: 8px;
-        font-size: 0.55rem;
-        font-weight: 800;
-        letter-spacing: 0.5px;
-        transition: all 0.3s ease;
-
-        &.is-added {
-          background: #2dd36f;
-          transform: scale(0.95);
-        }
       }
     }
   }

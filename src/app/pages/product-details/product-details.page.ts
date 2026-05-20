@@ -15,14 +15,6 @@ import { chevronBackOutline, cartOutline } from 'ionicons/icons';
 export class ProductDetailsPage implements OnInit {
   currentProduct: any = null;
 
-  addToCart(item: any) {
-    item.added = true;
-
-    setTimeout(() => {
-      item.added = false;
-    }, 2000);
-  }
-
   products: any = {
     lover: {
       title: 'LOVER',
